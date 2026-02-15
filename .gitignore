@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+.env.local
+.env
+coverage
+npm-debug.log*
+.DS_Store
+supabase/.temp

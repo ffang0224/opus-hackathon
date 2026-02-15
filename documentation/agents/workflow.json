@@ -1,0 +1,732 @@
+{
+  "createdAt": "2026-02-15T08:37:39.501Z",
+  "name": "Vendor Compliance Validation UAE",
+  "description": "This workflow automates the end-to-end process of collecting, validating, and verifying vendor business information for compliance with UAE business licensing, tax, and labor law regulations. It ensures that all required data is gathered, checked for accuracy, and cross-verified with relevant UAE authorities.",
+  "industry": "Professional & Business Services - Compliance Documentation Management",
+  "workflowId": "6aXxi5KzhPxyKJmx",
+  "workflowBlueprint": {
+    "id": "vendor_compliance_uae_001",
+    "name": "UAE Vendor Compliance Validation",
+    "input": {
+      "description": "Vendor business registration documents, ownership records, legal structure details, UAE contact information, business license copies, tax registration certificates, and labor law compliance attestations.",
+      "input_items": [
+        {
+          "description": "Vendor business registration documents",
+          "workflow_input_item_classification_tags": [
+            "business_information",
+            "registration"
+          ]
+        },
+        {
+          "description": "Ownership records and legal structure details",
+          "workflow_input_item_classification_tags": [
+            "ownership",
+            "legal_structure"
+          ]
+        },
+        {
+          "description": "UAE contact information",
+          "workflow_input_item_classification_tags": [
+            "contact_information",
+            "uae"
+          ]
+        },
+        {
+          "description": "Business license copies",
+          "workflow_input_item_classification_tags": [
+            "licensing",
+            "uae"
+          ]
+        },
+        {
+          "description": "Tax registration certificates",
+          "workflow_input_item_classification_tags": [
+            "tax",
+            "uae"
+          ]
+        },
+        {
+          "description": "Labor law compliance attestations",
+          "workflow_input_item_classification_tags": [
+            "labor_law",
+            "compliance"
+          ]
+        }
+      ]
+    },
+    "output": {
+      "description": "A structured compliance validation report for each vendor, including status of business information verification, licensing, tax, and labor law compliance.",
+      "output_items": [
+        {
+          "description": "Vendor compliance validation report",
+          "workflow_output_item_classification_tags": [
+            "compliance_report",
+            "vendor",
+            "uae"
+          ]
+        },
+        {
+          "description": "List of non-compliant vendors with identified issues",
+          "workflow_output_item_classification_tags": [
+            "exception_report",
+            "non_compliance",
+            "uae"
+          ]
+        }
+      ]
+    },
+    "region": "",
+    "country": "ARE",
+    "process": {
+      "description": "The process involves extracting and validating vendor business information, verifying licensing and tax compliance with UAE authorities, and confirming adherence to UAE labor laws.",
+      "workflow_process_classification_tags": [
+        "vendor_management",
+        "compliance",
+        "uae"
+      ]
+    },
+    "industry": "Professional & Business Services - Compliance Documentation Management",
+    "policies": [],
+    "data_sets": [
+      {
+        "id": "uae_business_license_registry",
+        "name": "UAE Business License Registry",
+        "source": "UAE government licensing authorities",
+        "country": "ARE",
+        "example": "https://ded.ae/BusinessLicenseLookup",
+        "publisher": {
+          "name": "UAE Department of Economic Development",
+          "acronym": "DED"
+        },
+        "data_set_classification_tags": [
+          "business_license",
+          "uae"
+        ]
+      },
+      {
+        "id": "uae_tax_registration_database",
+        "name": "UAE Tax Registration Database",
+        "source": "UAE Federal Tax Authority",
+        "country": "ARE",
+        "example": "https://eservices.tax.gov.ae",
+        "publisher": {
+          "name": "Federal Tax Authority",
+          "acronym": "FTA"
+        },
+        "data_set_classification_tags": [
+          "tax_registration",
+          "uae"
+        ]
+      },
+      {
+        "id": "uae_labor_compliance_records",
+        "name": "UAE Labor Compliance Records",
+        "source": "UAE Ministry of Human Resources and Emiratisation",
+        "country": "ARE",
+        "example": "https://www.mohre.gov.ae",
+        "publisher": {
+          "name": "Ministry of Human Resources and Emiratisation",
+          "acronym": "MOHRE"
+        },
+        "data_set_classification_tags": [
+          "labor_compliance",
+          "uae"
+        ]
+      }
+    ],
+    "objective": "Automate the validation of vendor business information and ensure compliance with UAE legal, regulatory, and operational requirements.",
+    "description": "This workflow automates the end-to-end process of collecting, validating, and verifying vendor business information for compliance with UAE business licensing, tax, and labor law regulations. It ensures that all required data is gathered, checked for accuracy, and cross-verified with relevant UAE authorities.",
+    "required_steps": [
+      {
+        "input": "vendor business registration documents, ownership records, legal structure details, UAE contact information, business license copies, tax registration certificates, labor law compliance attestations",
+        "output": "structured_vendor_information",
+        "objective": "Extract and structure all provided vendor business information for validation.",
+        "description": "Parse and organize vendor business registration documents, ownership records, legal structure details, UAE contact information, business license copies, tax registration certificates, and labor law compliance attestations into a standardized data format.",
+        "step_number": 1,
+        "workflow_step_classification_tags": [
+          "data_extraction",
+          "structuring"
+        ]
+      },
+      {
+        "input": "structured_vendor_information",
+        "output": "validated_vendor_information",
+        "objective": "Validate the completeness and accuracy of vendor business information.",
+        "description": "Check that all required fields are present and verify the accuracy of business name, legal structure, ownership details, and UAE contact information against provided documentation.",
+        "step_number": 2,
+        "workflow_step_classification_tags": [
+          "data_validation",
+          "business_information"
+        ]
+      },
+      {
+        "input": "validated_vendor_information",
+        "output": "license_verification_status",
+        "objective": "Verify vendor business licensing status with UAE authorities.",
+        "description": "Cross-check business license details with relevant UAE licensing authorities to confirm validity and current standing.",
+        "step_number": 3,
+        "workflow_step_classification_tags": [
+          "license_verification",
+          "uae"
+        ]
+      },
+      {
+        "input": "validated_vendor_information",
+        "output": "tax_compliance_status",
+        "objective": "Verify vendor tax registration and compliance with UAE tax authorities.",
+        "description": "Confirm the authenticity and validity of tax registration certificates and check for any outstanding tax compliance issues with UAE tax authorities.",
+        "step_number": 4,
+        "workflow_step_classification_tags": [
+          "tax_verification",
+          "uae"
+        ]
+      },
+      {
+        "input": "validated_vendor_information",
+        "output": "labor_law_compliance_status",
+        "objective": "Verify vendor compliance with UAE labor law requirements.",
+        "description": "Review labor law compliance attestations and cross-verify with UAE labor authorities to ensure adherence to all relevant labor regulations.",
+        "step_number": 5,
+        "workflow_step_classification_tags": [
+          "labor_law_verification",
+          "uae"
+        ]
+      },
+      {
+        "input": "license_verification_status, tax_compliance_status, labor_law_compliance_status",
+        "output": "vendor_compliance_validation_report",
+        "objective": "Generate a comprehensive compliance validation report for each vendor.",
+        "description": "Compile the results of business information validation, licensing, tax, and labor law compliance checks into a structured report, highlighting any non-compliance issues.",
+        "step_number": 6,
+        "workflow_step_classification_tags": [
+          "report_generation",
+          "compliance"
+        ]
+      }
+    ],
+    "workflow_classification_tags": [
+      "vendor_compliance",
+      "uae",
+      "regulatory_validation"
+    ]
+  },
+  "active": false,
+  "workflowImage": "",
+  "jobPayloadSchema": {
+    "business_license_copy": {
+      "id": "workflow_input_var_1_step-4",
+      "tags": [
+        {
+          "variable_name": "allowed_file_types",
+          "value": [
+            "JPEG",
+            "PNG",
+            "JPG",
+            "PDF",
+            "DOCX",
+            "CSV",
+            "XLS",
+            "XLSX",
+            "TXT",
+            "JSON",
+            "HTML",
+            "XML"
+          ],
+          "description": ""
+        }
+      ],
+      "type": "file",
+      "value": "https://files.opus.com/media/private/uploaded/media_c329466d-87a1-4c01-a915-281827cf5012.png",
+      "mapping": {},
+      "options": [],
+      "description": "The uploaded business license document that contains the license number, issue date, and expiry date.",
+      "is_nullable": false,
+      "display_name": "Business License Copy",
+      "variable_name": "business_license_copy",
+      "step_id_origin": "step-4",
+      "type_definition": {},
+      "display_description": "Upload the business license document file to extract license number, issue date, and expiry date.",
+      "unresolved_at_mapping": false,
+      "type_definition_enforced": true
+    },
+    "uae_contact_information": {
+      "id": "workflow_input_var_1_step-3",
+      "tags": [],
+      "type": "object",
+      "value": {
+        "email": "jv@zenithdeveloper.com",
+        "phone": "+971585716695",
+        "address": "Zenith A2 Tower, Dubai Sports City, UAE"
+      },
+      "mapping": {},
+      "options": [],
+      "description": "Structured UAE contact information containing address, phone, and email fields to be validated.",
+      "is_nullable": false,
+      "display_name": "UAE Contact Information",
+      "variable_name": "uae_contact_information",
+      "step_id_origin": "step-3",
+      "type_definition": {
+        "email": {
+          "id": "input_var_1_3",
+          "tags": [],
+          "type": "str",
+          "value": "example.user@company.ae",
+          "mapping": {},
+          "options": [],
+          "description": "The contact email address to be validated for standard email format.",
+          "is_nullable": false,
+          "display_name": "Email Address",
+          "variable_name": "email",
+          "type_definition": {},
+          "display_description": "Email address to be checked for presence and valid email syntax.",
+          "type_definition_enforced": true
+        },
+        "phone": {
+          "id": "input_var_1_2",
+          "tags": [],
+          "type": "str",
+          "value": "+971501234567",
+          "mapping": {},
+          "options": [],
+          "description": "The UAE phone number in international format, typically starting with +971.",
+          "is_nullable": false,
+          "display_name": "Phone Number",
+          "variable_name": "phone",
+          "type_definition": {},
+          "display_description": "UAE phone number to be checked for presence and valid +971 format.",
+          "type_definition_enforced": true
+        },
+        "address": {
+          "id": "input_var_1_1",
+          "tags": [],
+          "type": "str",
+          "value": "Office 1203, Tower A, Sheikh Zayed Road, Dubai, UAE",
+          "mapping": {},
+          "options": [],
+          "description": "The full UAE postal address, including street, city, and emirate.",
+          "is_nullable": false,
+          "display_name": "Address",
+          "variable_name": "address",
+          "type_definition": {},
+          "display_description": "Complete UAE address to validate for completeness and format.",
+          "type_definition_enforced": true
+        }
+      },
+      "display_description": "UAE contact details including address, phone number, and email address.",
+      "unresolved_at_mapping": false,
+      "type_definition_enforced": true
+    },
+    "tax_registration_certificate": {
+      "id": "workflow_input_var_1_step-5",
+      "tags": [
+        {
+          "variable_name": "allowed_file_types",
+          "value": [
+            "JPEG",
+            "PNG",
+            "JPG",
+            "PDF",
+            "DOCX",
+            "CSV",
+            "XLS",
+            "XLSX",
+            "TXT",
+            "JSON",
+            "HTML",
+            "XML"
+          ],
+          "description": ""
+        }
+      ],
+      "type": "file",
+      "value": "https://files.opus.com/media/private/uploaded/media_40f415d4-f6fa-4b70-ad40-70440e2a4840.png",
+      "mapping": {},
+      "options": [],
+      "description": "The tax registration certificate document containing the official tax registration number and tax status.",
+      "is_nullable": false,
+      "display_name": "Tax Registration Certificate",
+      "variable_name": "tax_registration_certificate",
+      "step_id_origin": "step-5",
+      "type_definition": {},
+      "display_description": "Upload the official tax registration certificate to extract the tax registration number and tax status.",
+      "unresolved_at_mapping": false,
+      "type_definition_enforced": true
+    },
+    "bank_details_proof": {
+      "id": "bank_details_proof_1a2b3c4d",
+      "tags": [
+        {
+          "variable_name": "allowed_file_types",
+          "value": [
+            "JPEG",
+            "PNG",
+            "JPG",
+            "PDF",
+            "DOCX",
+            "CSV",
+            "XLS",
+            "XLSX",
+            "TXT",
+            "JSON",
+            "HTML",
+            "XML"
+          ],
+          "description": ""
+        }
+      ],
+      "type": "file",
+      "value": "https://files.opus.com/media/private/uploaded/media_455b42ca-701a-45f8-8da0-51c47e87138d.png",
+      "options": [],
+      "description": "The uploaded proof of bank details, such as a bank statement or letter, to verify the vendor's banking information.",
+      "is_nullable": false,
+      "display_name": "Bank Details Proof",
+      "variable_name": "bank_details_proof",
+      "step_id_origin": "",
+      "type_definition": {},
+      "display_description": "Upload a document as proof of bank details (e.g., bank statement or letter).",
+      "unresolved_at_mapping": false
+    }
+  },
+  "jobResultsPayloadSchema": {
+    "reviewed_business_license_validation_status": {
+      "id": "output_var_rblvs_001",
+      "variable_name": "reviewed_business_license_validation_status",
+      "display_name": "Reviewed Business License Validation Status",
+      "description": "The reviewed validation status of the business license as determined by the review node.",
+      "display_description": "The reviewed validation status of the business license.",
+      "value": {
+        "business_license_validation_status": ""
+      },
+      "type": "str",
+      "is_nullable": false,
+      "tags": [],
+      "options": [],
+      "type_definition": {},
+      "type_definition_enforced": true,
+      "mapping": {
+        "node_origin_id": "6dffafe9-98c2-4764-84fb-28be167eb775",
+        "variable_path": "workflow_output_ddcqc0ch5",
+        "set_value": null
+      },
+      "selected_human_review": {},
+      "suggested_human_reviews": [],
+      "valid_human_reviews": [],
+      "reference_variables_for_review": [],
+      "unresolved_at_mapping": false,
+      "step_id_origin": ""
+    },
+    "reviewed_tax_registration_validation_status": {
+      "id": "output_var_rtrvs_002",
+      "variable_name": "reviewed_tax_registration_validation_status",
+      "display_name": "Reviewed Tax Registration Validation Status",
+      "description": "The reviewed validation status of the tax registration as determined by the review node.",
+      "display_description": "The reviewed validation status of the tax registration.",
+      "value": {
+        "tax_registration_validation_status": ""
+      },
+      "type": "str",
+      "is_nullable": false,
+      "tags": [],
+      "options": [],
+      "type_definition": {},
+      "type_definition_enforced": true,
+      "mapping": {
+        "node_origin_id": "56ff07c8-9588-449f-9a2a-1ee25c860660",
+        "variable_path": "tax_registration_validation_status"
+      },
+      "selected_human_review": {},
+      "suggested_human_reviews": [],
+      "valid_human_reviews": [],
+      "reference_variables_for_review": [],
+      "unresolved_at_mapping": false,
+      "step_id_origin": ""
+    },
+    "reviewed_bank_details_validation_status": {
+      "id": "output_var_rbdvs_003",
+      "variable_name": "reviewed_bank_details_validation_status",
+      "display_name": "Reviewed Bank Details Validation Status",
+      "description": "The reviewed validation status of the provided bank details as determined by the review node.",
+      "display_description": "The reviewed validation status of the provided bank details.",
+      "value": {
+        "bank_details_validation_status": ""
+      },
+      "type": "str",
+      "is_nullable": false,
+      "tags": [],
+      "options": [],
+      "type_definition": {},
+      "type_definition_enforced": true,
+      "mapping": {
+        "node_origin_id": "d29f8f2a-2aa9-4b9f-97dc-4c542b7e5305",
+        "variable_path": "bank_details_validation_status",
+        "set_value": {}
+      },
+      "selected_human_review": {},
+      "suggested_human_reviews": [],
+      "valid_human_reviews": [],
+      "reference_variables_for_review": [],
+      "unresolved_at_mapping": false,
+      "step_id_origin": ""
+    },
+    "reviewed_extracted_bank_account_information": {
+      "id": "output_var_rebai_004",
+      "variable_name": "reviewed_extracted_bank_account_information",
+      "display_name": "Reviewed Extracted Bank Account Information",
+      "description": "The reviewed extracted bank account information including account holder name, account number, bank name, IBAN, and branch as determined by the review node.",
+      "display_description": "The reviewed extracted bank account information (account holder, number, bank, IBAN, branch).",
+      "value": {
+        "extracted_bank_account_information": {
+          "account_holder_name": "",
+          "account_number": "",
+          "bank_name": "",
+          "iban": "",
+          "branch": ""
+        }
+      },
+      "type": "object",
+      "is_nullable": false,
+      "tags": [],
+      "options": [],
+      "type_definition": {
+        "account_holder_name": {
+          "id": "output_var_2_1",
+          "variable_name": "account_holder_name",
+          "display_name": "Account Holder Name (Reviewed)",
+          "description": "The reviewed full name of the bank account holder, with any issues flagged.",
+          "display_description": "Reviewed name of the bank account holder",
+          "value": "John Doe",
+          "type": "str",
+          "is_nullable": false,
+          "tags": [],
+          "options": [],
+          "type_definition": {},
+          "type_definition_enforced": true,
+          "mapping": null
+        },
+        "account_number": {
+          "id": "output_var_2_2",
+          "variable_name": "account_number",
+          "display_name": "Account Number (Reviewed)",
+          "description": "The reviewed bank account number, with any issues flagged.",
+          "display_description": "Reviewed bank account number",
+          "value": "1234567890",
+          "type": "str",
+          "is_nullable": false,
+          "tags": [],
+          "options": [],
+          "type_definition": {},
+          "type_definition_enforced": true,
+          "mapping": null
+        },
+        "bank_name": {
+          "id": "output_var_2_3",
+          "variable_name": "bank_name",
+          "display_name": "Bank Name (Reviewed)",
+          "description": "The reviewed name of the bank, with any issues flagged.",
+          "display_description": "Reviewed name of the bank",
+          "value": "Example Bank",
+          "type": "str",
+          "is_nullable": false,
+          "tags": [],
+          "options": [],
+          "type_definition": {},
+          "type_definition_enforced": true,
+          "mapping": null
+        },
+        "iban": {
+          "id": "output_var_2_4",
+          "variable_name": "iban",
+          "display_name": "IBAN (Reviewed)",
+          "description": "The reviewed International Bank Account Number (IBAN), with any issues flagged.",
+          "display_description": "Reviewed International Bank Account Number",
+          "value": "GB29NWBK60161331926819",
+          "type": "str",
+          "is_nullable": false,
+          "tags": [],
+          "options": [],
+          "type_definition": {},
+          "type_definition_enforced": true,
+          "mapping": null
+        },
+        "branch": {
+          "id": "output_var_2_5",
+          "variable_name": "branch",
+          "display_name": "Branch (Reviewed)",
+          "description": "The reviewed branch of the bank, with any issues flagged.",
+          "display_description": "Reviewed branch of the bank",
+          "value": "London Main",
+          "type": "str",
+          "is_nullable": false,
+          "tags": [],
+          "options": [],
+          "type_definition": {},
+          "type_definition_enforced": true,
+          "mapping": null
+        }
+      },
+      "type_definition_enforced": true,
+      "mapping": {
+        "node_origin_id": "d29f8f2a-2aa9-4b9f-97dc-4c542b7e5305",
+        "variable_path": "extracted_bank_account_information",
+        "set_value": null
+      },
+      "selected_human_review": {},
+      "suggested_human_reviews": [],
+      "valid_human_reviews": [],
+      "reference_variables_for_review": [],
+      "unresolved_at_mapping": false,
+      "step_id_origin": ""
+    },
+    "reviewed_contact_information_validation_status": {
+      "id": "output_var_rcivs_005",
+      "variable_name": "reviewed_contact_information_validation_status",
+      "display_name": "Reviewed Contact Information Validation Status",
+      "description": "The reviewed validation status of the contact information as determined by the review node.",
+      "display_description": "The reviewed validation status of the contact information.",
+      "value": {
+        "contact_information_validation_status": ""
+      },
+      "type": "str",
+      "is_nullable": false,
+      "tags": [],
+      "options": [],
+      "type_definition": {},
+      "type_definition_enforced": true,
+      "mapping": {
+        "node_origin_id": "3363ccca-9793-4e00-bcf8-ed9df984dec4",
+        "variable_path": "contact_information_validation_status",
+        "set_value": {}
+      },
+      "selected_human_review": {},
+      "suggested_human_reviews": [],
+      "valid_human_reviews": [],
+      "reference_variables_for_review": [],
+      "unresolved_at_mapping": false,
+      "step_id_origin": ""
+    },
+    "reviewed_contact_information_authenticity_status": {
+      "id": "output_var_rcias_006",
+      "variable_name": "reviewed_contact_information_authenticity_status",
+      "display_name": "Reviewed Contact Information Authenticity Status",
+      "description": "The reviewed authenticity status of the provided contact information as determined by the review node.",
+      "display_description": "The reviewed authenticity status of the provided contact information.",
+      "value": {
+        "contact_information_authenticity_status": ""
+      },
+      "type": "str",
+      "is_nullable": false,
+      "tags": [],
+      "options": [],
+      "type_definition": {},
+      "type_definition_enforced": true,
+      "mapping": {
+        "node_origin_id": "c062929a-42bf-4987-84f1-ca5265ac3c81",
+        "variable_path": "contact_information_authenticity_status",
+        "set_value": {}
+      },
+      "selected_human_review": {},
+      "suggested_human_reviews": [],
+      "valid_human_reviews": [],
+      "reference_variables_for_review": [],
+      "unresolved_at_mapping": false,
+      "step_id_origin": ""
+    },
+    "important_dates": {
+      "id": "output_var_impdates_007",
+      "variable_name": "important_dates",
+      "display_name": "Important Dates",
+      "description": "An array of analyzed key business dates for compliance tracking, including type, ISO date, days remaining, status, and recommended action.",
+      "display_description": "Array of analyzed key business dates for compliance tracking.",
+      "value": [],
+      "type": "array",
+      "is_nullable": false,
+      "tags": [],
+      "options": [],
+      "type_definition": {
+        "id": "output_var_1_1",
+        "variable_name": "important_date_entry",
+        "display_name": "Important Date Entry",
+        "description": "A single important date entry with its compliance label and value.",
+        "display_description": "An entry containing a compliance-relevant date and its label.",
+        "value": {
+          "date_label": "License Issue Date",
+          "date_value": "2023-01-15"
+        },
+        "type": "object",
+        "is_nullable": false,
+        "tags": [],
+        "options": [],
+        "type_definition": {
+          "date_label": {
+            "id": "output_var_1_1_1",
+            "variable_name": "date_label",
+            "display_name": "Date Label",
+            "description": "The compliance-related label for the date (e.g., License Issue Date, License Expiry Date, Tax Registration Date, Other).",
+            "display_description": "The type or label of the compliance date.",
+            "value": "License Issue Date",
+            "type": "str",
+            "is_nullable": false,
+            "tags": [],
+            "options": [
+              "License Issue Date",
+              "License Expiry Date",
+              "Tax Registration Date",
+              "Other"
+            ],
+            "type_definition": {},
+            "type_definition_enforced": true,
+            "mapping": {}
+          },
+          "date_value": {
+            "id": "output_var_1_1_2",
+            "variable_name": "date_value",
+            "display_name": "Date Value",
+            "description": "The value of the identified date in ISO format (YYYY-MM-DD).",
+            "display_description": "The extracted date in ISO format.",
+            "value": "2023-01-15",
+            "type": "date",
+            "is_nullable": false,
+            "tags": [],
+            "options": [],
+            "type_definition": "%Y-%m-%d",
+            "type_definition_enforced": true,
+            "mapping": {}
+          }
+        },
+        "type_definition_enforced": true,
+        "mapping": {}
+      },
+      "type_definition_enforced": true,
+      "mapping": {
+        "node_origin_id": "127b4c2c-192a-49ae-a9a1-5f707b8d26fe",
+        "variable_path": "important_dates"
+      },
+      "selected_human_review": {},
+      "suggested_human_reviews": [],
+      "valid_human_reviews": [],
+      "reference_variables_for_review": [],
+      "unresolved_at_mapping": false,
+      "step_id_origin": ""
+    },
+    "workflow_output_dhk3xn1es": {
+      "id": "dhk3xn1es",
+      "variable_name": "workflow_output_dhk3xn1es",
+      "description": "Reason for approval/disapproval",
+      "display_name": "Reviewed Business Reason",
+      "display_description": "Reason for approval/disapproval",
+      "value": "",
+      "type": "str",
+      "is_nullable": false,
+      "tags": [],
+      "options": [],
+      "mapping": {
+        "node_origin_id": "6dffafe9-98c2-4764-84fb-28be167eb775",
+        "variable_path": "workflow_output_qett7gsds"
+      }
+    }
+  },
+  "workflowEstimation": {
+    "workflow_cost": 2.228,
+    "workflow_time": 180000
+  }
+}

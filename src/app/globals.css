@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 24% 97%;
+  --foreground: 218 29% 14%;
+  --card: 0 0% 100%;
+  --card-foreground: 218 29% 14%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 218 29% 14%;
+  --primary: 206 89% 32%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 28% 92%;
+  --secondary-foreground: 218 29% 14%;
+  --muted: 210 30% 94%;
+  --muted-foreground: 218 11% 36%;
+  --accent: 199 70% 89%;
+  --accent-foreground: 217 26% 18%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 24% 84%;
+  --input: 214 24% 84%;
+  --ring: 206 89% 32%;
+  --radius: 0.7rem;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  background-image:
+    radial-gradient(circle at 9% 11%, rgba(13, 71, 161, 0.1), transparent 33%),
+    radial-gradient(circle at 86% 6%, rgba(0, 132, 160, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(243, 248, 252, 0.97) 100%);
+}
+
+a {
+  transition: color 160ms ease, opacity 160ms ease;
+}
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-slide-up {
+  animation: fade-slide-up 0.28s ease-out;
+}
+
+.panel-hover {
+  transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease, background-color 170ms ease;
+}
+
+.panel-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 32px -24px rgba(8, 37, 75, 0.44);
+  border-color: rgba(11, 94, 174, 0.38);
+}
+
+.section-title {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: hsl(var(--muted-foreground));
+}
+
+.shell-header {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(252, 254, 255, 0.86) 100%);
+  border-bottom: 1px solid rgba(170, 188, 210, 0.45);
+  backdrop-filter: blur(10px);
+}
+
+.shell-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: hsl(var(--foreground));
+}
+
+.brand-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 0.6rem;
+  background: linear-gradient(135deg, rgba(12, 98, 184, 0.96), rgba(3, 132, 181, 0.94));
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.nav-pill {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.nav-pill-active {
+  color: hsl(var(--foreground));
+  border-color: rgba(11, 94, 174, 0.28);
+  background: linear-gradient(180deg, rgba(226, 240, 255, 0.88) 0%, rgba(236, 246, 255, 0.72) 100%);
+}
+
+.hero-panel {
+  border: 1px solid rgba(171, 189, 212, 0.58);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 252, 255, 0.92) 100%);
+  box-shadow: 0 12px 32px -30px rgba(15, 43, 78, 0.45);
+}
+
+.metric-panel {
+  border: 1px solid rgba(176, 192, 212, 0.58);
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.table-shell {
+  border: 1px solid rgba(176, 192, 212, 0.58);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 10px 24px -28px rgba(13, 40, 77, 0.4);
+}
